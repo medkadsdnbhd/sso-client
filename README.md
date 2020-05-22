@@ -1,0 +1,2 @@
+# Medkad SSO Client - Laravel Package
+[![Latest Stable Version](https://poser.pugx.org/medkad/sso/v)](//packagist.org/packages/medkad/sso) [![Total Downloads](https://poser.pugx.org/medkad/sso/downloads)](//packagist.org/packages/medkad/sso) [![Latest Unstable Version](https://poser.pugx.org/medkad/sso/v/unstable)](//packagist.org/packages/medkad/sso) [![License](https://poser.pugx.org/medkad/sso/license)](//packagist.org/packages/medkad/sso)
