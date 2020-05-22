@@ -1,13 +1,10 @@
 <?php
 
 return [
-    'controller' => [
-        'class' => \App\Http\Controllers\Auth\LoginController::class,
-        'method' => 'loginWithPassport',
-    ],
-
-    'route' => [
-        'name' => 'login',
-        'uri' => '/login',
+    'laravelpassport' => [
+        'client_id' => env('LARAVELPASSPORT_CLIENT_ID'),
+        'client_secret' => env('LARAVELPASSPORT_CLIENT_SECRET'),
+        'redirect' => env('LARAVELPASSPORT_REDIRECT_URI'),
+        'host' => env('LARAVELPASSPORT_HOST'),
     ],
 ];
