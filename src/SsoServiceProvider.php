@@ -20,6 +20,8 @@ class SsoServiceProvider extends ServiceProvider
                 __DIR__ . '/config/config.php' => config_path('socialite-passport.php'),
             ], 'config');
         }
+
+        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
     }
 
     /**
