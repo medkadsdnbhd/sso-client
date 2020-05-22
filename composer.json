@@ -10,5 +10,38 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "^1.8",
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Medkad\\Sso\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Medkad\\Sso\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Medkad\\Sso\\SsoServiceProvider"
+            ]
+        }
+    }
 }
