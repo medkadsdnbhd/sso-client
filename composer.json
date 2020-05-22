@@ -1,0 +1,14 @@
+{
+    "name": "medkad/sso",
+    "description": "Medkad SSO Client - Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MUHAMMAD TARMIZI SANUSI AFKAR",
+            "email": "realtarmizisanusi@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
