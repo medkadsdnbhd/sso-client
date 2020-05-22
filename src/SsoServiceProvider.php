@@ -13,7 +13,11 @@ class SsoServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/config/config.php' => config_path('socialite-passport.php'),
+            ], 'config');
+        }
     }
 
     /**
@@ -23,6 +27,7 @@ class SsoServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(__DIR__.'/config/config.php', 'socialite-passport');
+        $this->mergeConfigFrom(__DIR__.'/config/services.php', 'services');
     }
 }
