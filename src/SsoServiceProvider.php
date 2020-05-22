@@ -3,6 +3,8 @@
 namespace Medkad\Sso;
 
 use Illuminate\Support\ServiceProvider;
+use Medkad\Sso\Http\Controllers\AuthenticationController;
+use Medkad\Sso\Providers\EventServiceProvider;
 
 class SsoServiceProvider extends ServiceProvider
 {
@@ -29,5 +31,11 @@ class SsoServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/config/config.php', 'socialite-passport');
         $this->mergeConfigFrom(__DIR__.'/config/services.php', 'services');
+
+        $this->app->register(EventServiceProvider::class);
+
+        $this->app->bind('AuthenticationController', function () {
+            return new AuthenticationController();
+        });
     }
 }
